@@ -20,7 +20,7 @@ MonoBehaviour:
     Id:
       Value: 311970299389930735
   Scene: CustomDesert
-  ScenePath: Assets/Scenes/Levels/CustomDesert.unity
+  ScenePath: Assets/Scenes/Levels/Vanilla/CustomDesert.unity
   SceneGuid: 0a445e83695e8424e9e56da3e5b773e4
   WorldSize: 35
   BucketsCount: 8
