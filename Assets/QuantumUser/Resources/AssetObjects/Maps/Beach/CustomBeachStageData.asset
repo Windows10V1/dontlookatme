@@ -7446,10 +7446,6 @@ MonoBehaviour:
     Y:
       RawValue: 49152
   - X:
-      RawValue: -753664
-    Y:
-      RawValue: 32768
-  - X:
       RawValue: -327680
     Y:
       RawValue: 294912
@@ -7466,10 +7462,6 @@ MonoBehaviour:
     Y:
       RawValue: -65536
   - X:
-      RawValue: -458752
-    Y:
-      RawValue: -65536
-  - X:
       RawValue: 688128
     Y:
       RawValue: 131072
@@ -7477,3 +7469,11 @@ MonoBehaviour:
       RawValue: 245760
     Y:
       RawValue: 327680
+  - X:
+      RawValue: -458752
+    Y:
+      RawValue: -65536
+  - X:
+      RawValue: -753664
+    Y:
+      RawValue: 32768
