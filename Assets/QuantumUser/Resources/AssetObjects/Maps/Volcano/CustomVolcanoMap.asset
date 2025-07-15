@@ -20,7 +20,7 @@ MonoBehaviour:
     Id:
       Value: 527045911256108279
   Scene: CustomVolcano
-  ScenePath: Assets/Scenes/Levels/Vanilla/CustomVolcano.unity
+  ScenePath: Assets/Scenes/Levels/CustomVolcano.unity
   SceneGuid: 48dfbffbd41b62a41a8135ce450497f5
   WorldSize: 40
   BucketsCount: 8

@@ -20,7 +20,7 @@ MonoBehaviour:
     Id:
       Value: 339949677395203946
   Scene: CustomBeach
-  ScenePath: Assets/Scenes/Levels/Vanilla/CustomBeach.unity
+  ScenePath: Assets/Scenes/Levels/CustomBeach.unity
   SceneGuid: fb42e791761c8774688977ac600ab52b
   WorldSize: 32
   BucketsCount: 8
@@ -357,7 +357,7 @@ MonoBehaviour:
           X:
             RawValue: 409600
           Y:
-            RawValue: 409600
+            RawValue: 344064
         Rotation:
           RawValue: 0
     - rid: 1962602120704163841
@@ -431,7 +431,7 @@ MonoBehaviour:
           X:
             RawValue: 344064
           Y:
-            RawValue: 442368
+            RawValue: 376832
         Rotation:
           RawValue: 0
     - rid: 2141264185315557377
@@ -505,7 +505,7 @@ MonoBehaviour:
           X:
             RawValue: 16384
           Y:
-            RawValue: 376832
+            RawValue: 311296
         Rotation:
           RawValue: 0
     - rid: 3002951718586548225
@@ -1142,7 +1142,7 @@ MonoBehaviour:
           X:
             RawValue: 81920
           Y:
-            RawValue: 409600
+            RawValue: 344064
         Rotation:
           RawValue: 0
     - rid: 6448585381364367361
@@ -1216,7 +1216,7 @@ MonoBehaviour:
           X:
             RawValue: 475136
           Y:
-            RawValue: 376832
+            RawValue: 311296
         Rotation:
           RawValue: 0
     - rid: 7030090959303999489
@@ -1438,7 +1438,7 @@ MonoBehaviour:
           X:
             RawValue: 147456
           Y:
-            RawValue: 442368
+            RawValue: 376832
         Rotation:
           RawValue: 0
     - rid: 7451195941282906113
