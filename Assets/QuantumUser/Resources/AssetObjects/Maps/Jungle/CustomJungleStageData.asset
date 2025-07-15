@@ -39,14 +39,14 @@ MonoBehaviour:
   ExtendCeilingHitboxes: 1
   Spawnpoint:
     X:
-      RawValue: -1677722
+      RawValue: -1523712
     Y:
-      RawValue: 163840
+      RawValue: 180224
   SpawnpointArea:
     X:
-      RawValue: 52429
+      RawValue: 91750
     Y:
-      RawValue: 45875
+      RawValue: 52429
   OverrideAutomaticCameraSettings: 1
   CameraMinPosition:
     X:
@@ -2075,27 +2075,27 @@ MonoBehaviour:
     Flags: 0
   - Tile:
       Id:
-        Value: 404632403293626365
+        Value: 393438471761372052
     Rotation: 0
     Flags: 0
   - Tile:
       Id:
-        Value: 404632403293626365
+        Value: 393438471761372052
     Rotation: 0
     Flags: 0
   - Tile:
       Id:
-        Value: 404632403293626365
+        Value: 393438471761372052
     Rotation: 0
     Flags: 0
   - Tile:
       Id:
-        Value: 404632403293626365
+        Value: 393438471761372052
     Rotation: 0
     Flags: 0
   - Tile:
       Id:
-        Value: 404632403293626365
+        Value: 393438471761372052
     Rotation: 0
     Flags: 0
   - Tile:
