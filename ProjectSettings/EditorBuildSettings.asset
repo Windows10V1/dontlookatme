@@ -47,6 +47,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Vanilla/CustomGhost.unity
     guid: 39b9f67bcc00dd640a5971ac500078e9
+  - enabled: 1
+    path: Assets/Scenes/Levels/WMM/SlopeyHeights.unity
+    guid: 7c846c47356009b4eadf01ee185b0d42
+  - enabled: 1
+    path: Assets/Scenes/Levels/WMM/SlopeyHeights.unity
+    guid: a131f226107235e46abeaf4ee95878ec
+  - enabled: 1
+    path: Assets/Scenes/Levels/WMM/ShortBricks.unity
+    guid: bddf44e7b6d09c046b17aa469b375f57
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: b02bce592fba21b4982d8cf5e36a1459,
       type: 2}
