@@ -69,6 +69,12 @@ MonoBehaviour:
   MainMusic:
   - Id:
       Value: 386992444490795070
+  - Id:
+      Value: 397760476910646330
+  - Id:
+      Value: 459249922506144942
+  - Id:
+      Value: 384731337782729028
   InvincibleMusic:
     Id:
       Value: 289056355789154037

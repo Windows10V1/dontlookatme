@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075af0e881e112348abe562216ddc298, type: 3}
+  m_Name: GhostHouse-2
+  m_EditorClassIdentifier: 
+  Identifier:
+    Path: QuantumUser/Resources/AssetObjects/Music/WMM/GhostHouse-2
+    Guid:
+      Value: 459249922506144942
+  clip: {fileID: 8300000, guid: fac581185f916f2419a270eca5d6ec62, type: 3}
+  fastClip: {fileID: 8300000, guid: a3aa2877d3260d14cae885344a970acd, type: 3}
+  loopStartSeconds: 7.19
+  loopEndSeconds: 83.99
+  speedupFactor: 1.25
