@@ -59,9 +59,7 @@ namespace NSMB.UI.MainMenu.Submenus.InRoom {
                 StopCoroutine(autoRefreshCoroutine);
                 autoRefreshCoroutine = null;
             }
-            if (NetworkHandler.Client != null) {
-                NetworkHandler.Client.RemoveCallbackTarget(this);
-            }
+            NetworkHandler.Client.RemoveCallbackTarget(this);
         }
 
         public unsafe void PopulatePlayerEntries(Frame f) {
@@ -162,8 +160,11 @@ namespace NSMB.UI.MainMenu.Submenus.InRoom {
         }
 
         private void UpdateLocks() {
-            int maxPlayers = (NetworkHandler.Client.CurrentRoom == null) ? Constants.MaxPlayers : NetworkHandler.Client.CurrentRoom.MaxPlayers;
+            if (NetworkHandler.Client.CurrentRoom == null) {
+                return;
+            }
 
+            int maxPlayers = NetworkHandler.Client.CurrentRoom.MaxPlayers;
             for (int i = 0; i < playerListEntries.Count; i++) {
                 playerListEntries[i].lockImage.gameObject.SetActive(i >= maxPlayers);
             }

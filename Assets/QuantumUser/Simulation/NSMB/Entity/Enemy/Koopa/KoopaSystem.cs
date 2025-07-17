@@ -33,7 +33,6 @@ namespace Quantum {
         }
 
         public override void Update(Frame f, ref Filter filter, VersusStageData stage) {
-            var entity = filter.Entity;
             var enemy = filter.Enemy;
             var koopa = filter.Koopa;
             var transform = filter.Transform;
@@ -63,15 +62,13 @@ namespace Quantum {
                         mario->HeldEntity = default;
                         holdable->PreviousHolder = default;
                         holdable->Holder = default;
-
-                        PhysicsObjectSystem.TryEject(f, entity, stage);
                     }
                 }
             }
 
             // Turn around when hitting a wall.
             if (physicsObject->IsTouchingLeftWall || physicsObject->IsTouchingRightWall) {
-                enemy->ChangeFacingRight(f, entity, physicsObject->IsTouchingLeftWall);
+                enemy->ChangeFacingRight(f, filter.Entity, physicsObject->IsTouchingLeftWall);
 
                 if (koopa->IsKicked) {
                     QList<PhysicsContact> contacts = f.ResolveList(physicsObject->Contacts);
@@ -86,12 +83,12 @@ namespace Quantum {
                         var tileInstance = stage.GetTileRelative(f, contact.Tile);
                         StageTile tile = f.FindAsset(tileInstance.Tile);
                         if (tile is IInteractableTile it) {
-                            it.Interact(f, entity, right ? InteractionDirection.Right : InteractionDirection.Left,
+                            it.Interact(f, filter.Entity, right ? InteractionDirection.Right : InteractionDirection.Left,
                                 contact.Tile, tileInstance, out bool tempPlayBumpSound);
                         }
                     }
 
-                    f.Events.PlayBumpSound(entity);
+                    f.Events.PlayBumpSound(filter.Entity);
                 }
             }
 
@@ -131,7 +128,7 @@ namespace Quantum {
                     }
 
                     if (turnaround) {
-                        enemy->ChangeFacingRight(f, entity, !enemy->FacingRight);
+                        enemy->ChangeFacingRight(f, filter.Entity, !enemy->FacingRight);
                     }
                 }
             }
