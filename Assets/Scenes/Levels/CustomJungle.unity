@@ -17739,7 +17739,7 @@ GameObject:
   - component: {fileID: 1656127096}
   - component: {fileID: 1656127095}
   m_Layer: 21
-  m_Name: Snow
+  m_Name: Leafs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
