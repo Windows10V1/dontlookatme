@@ -20,17 +20,17 @@ MonoBehaviour:
     UpdateFPS: 60
     ChecksumInterval: 0
     RollbackWindow: 60
-    InputHardTolerance: 10
-    InputRedundancy: 1
+    InputHardTolerance: 3
+    InputRedundancy: 3
     InputRepeatMaxDistance: 10
     SessionStartTimeout: 0
-    TimeCorrectionRate: 4
-    MinTimeCorrectionFrames: 1
-    MinOffsetCorrectionDiff: 1
+    TimeCorrectionRate: 8
+    MinTimeCorrectionFrames: 4
+    MinOffsetCorrectionDiff: 2
     TimeScaleMin: 100
     TimeScalePingMin: 100
-    TimeScalePingMax: 300
-    InputDelayMin: 1
-    InputDelayMax: 15
-    InputDelayPingStart: 120
+    TimeScalePingMax: 250
+    InputDelayMin: 2
+    InputDelayMax: 25
+    InputDelayPingStart: 100
     InputFixedSize: 0
