@@ -572,10 +572,7 @@ namespace NSMB.Entities.Player {
             foreach (Renderer r in renderers) {
                 r.SetPropertyBlock(materialBlock);
                 foreach (var m in materials[r]) {
-                    var newShader = mario->IsStarmanInvincible ? rainbowShader : normalShader;
-                    if (m.shader != newShader) {
-                        m.shader = newShader;
-                    }
+                    m.shader = mario->IsStarmanInvincible ? rainbowShader : normalShader;
                 }
             }
 

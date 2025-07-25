@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace NSMB.UI.Game.Scoreboard {
-    public unsafe class ScoreboardEntry : MonoBehaviour {
+    public class ScoreboardEntry : MonoBehaviour {
 
         //---Properties
         public EntityRef Target { get; private set; }
@@ -31,7 +31,6 @@ namespace NSMB.UI.Game.Scoreboard {
             QuantumEvent.Subscribe<EventMarioPlayerPreRespawned>(this, OnMarioPlayerPreRespawned);
             QuantumEvent.Subscribe<EventMarioPlayerDestroyed>(this, OnMarioPlayerDestroyed);
             QuantumEvent.Subscribe<EventPlayerRemoved>(this, OnPlayerRemoved);
-            QuantumEvent.Subscribe<EventPlayerDataChanged>(this, OnPlayerDataChanged);
 
             var game = QuantumRunner.DefaultGame;
             if (game != null) {
@@ -39,7 +38,7 @@ namespace NSMB.UI.Game.Scoreboard {
             }
         }
 
-        public void Initialize(Frame f, int index, EntityRef target, ScoreboardUpdater updater) {
+        public unsafe void Initialize(Frame f, int index, EntityRef target, ScoreboardUpdater updater) {
             Target = target;
             this.updater = updater;
 
@@ -60,20 +59,13 @@ namespace NSMB.UI.Game.Scoreboard {
             }
         }
 
-        public void UpdatePing(Frame f) {
+        public unsafe void UpdateEntry(Frame f) {
+            var gamemode = f.FindAsset(f.Global->Rules.Gamemode);
             ref PlayerInformation info = ref f.Global->PlayerInfo[informationIndex];
+
             var playerData = QuantumUtils.GetPlayerData(f, info.PlayerRef);
             int ping = (!info.Disconnected && playerData != null) ? playerData->Ping : -1;
             pingIndicator.sprite = Utils.GetPingSprite(ping);
-        }
-
-        public void UpdateEntry(Frame f) {
-            var gamemode = f.FindAsset(f.Global->Rules.Gamemode);
-            ref PlayerInformation info = ref f.Global->PlayerInfo[informationIndex];
-            var playerData = QuantumUtils.GetPlayerData(f, info.PlayerRef);
-            
-            UpdatePing(f);
-
             if (nicknameMayHaveChanged) {
                 nicknameText.text = cachedNickname;
                 nicknameMayHaveChanged = false;
@@ -125,15 +117,6 @@ namespace NSMB.UI.Game.Scoreboard {
             UpdateEntry(e.Game.Frames.Predicted);
         }
 
-        private void OnPlayerDataChanged(EventPlayerDataChanged e) {
-            Frame f = e.Game.Frames.Predicted;
-            if (e.Player != f.Global->PlayerInfo[informationIndex].PlayerRef) {
-                return;
-            }
-
-            UpdateEntry(f);
-        }
-
         private void OnMarioPlayerDroppedStar(EventMarioPlayerDroppedStar e) {
             if (e.Entity != Target) {
                 return;
@@ -162,7 +145,7 @@ namespace NSMB.UI.Game.Scoreboard {
             UpdateEntry(e.Game.Frames.Predicted);
         }
 
-        private void OnPlayerRemoved(EventPlayerRemoved e) {
+        private unsafe void OnPlayerRemoved(EventPlayerRemoved e) {
             Frame f = e.Game.Frames.Verified;
             ref PlayerInformation info = ref f.Global->PlayerInfo[informationIndex];
             cachedNickname = info.Nickname.ToString().ToValidNickname(f, info.PlayerRef);

@@ -216,9 +216,7 @@ namespace NSMB.Entities.CoinItems {
                 return;
             }
 
-            if (!IsReplayFastForwarding) {
-                marioPlayerAnimator.PlaySound(SoundEffect.World_Gold_Block_Damage);
-            }
+            marioPlayerAnimator.PlaySound(SoundEffect.World_Gold_Block_Damage);
             helmetModel.transform.SetParent(null, true);
             lostViaDamage = true;
             lostViaDamageVelocity = Vector3.ProjectOnPlane(helmetModel.transform.rotation * lostViaDamageInitialVelocity, Vector3.forward);
@@ -234,19 +232,6 @@ namespace NSMB.Entities.CoinItems {
             StartCoroutine(DelayedParticlePlay());
         }
 
-        private void OnGoldBlockRanOutOfCoins(EventGoldBlockRanOutOfCoins e) {
-            if (e.GoldBlock != EntityRef) {
-                return;
-            }
-            if (!IsReplayFastForwarding) {
-                marioPlayerAnimator.PlaySound(SoundEffect.World_Gold_Block_Finished);
-            }
-            helmetMeshRenderer.enabled = false;
-            MiscParticles.Instance.Play(ParticleEffect.Puff, helmetModel.transform.position);
-            Destroy(gameObject);
-            Destroy(helmetModel);
-        }
-
         private void OnGameResynced(CallbackGameResynced e) {
             Frame f = PredictedFrame;
             if (EntityView) {
@@ -259,6 +244,18 @@ namespace NSMB.Entities.CoinItems {
                 Destroy(helmetModel);
             }
             resyncedThisFrame = true;
+        }
+
+        private void OnGoldBlockRanOutOfCoins(EventGoldBlockRanOutOfCoins e) {
+            if (e.GoldBlock != EntityRef) {
+                return;
+            }
+
+            marioPlayerAnimator.PlaySound(SoundEffect.World_Gold_Block_Finished);
+            helmetMeshRenderer.enabled = false;
+            MiscParticles.Instance.Play(ParticleEffect.Puff, helmetModel.transform.position);
+            Destroy(gameObject);
+            Destroy(helmetModel);
         }
 
         [System.Serializable]

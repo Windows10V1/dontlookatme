@@ -127,11 +127,6 @@ namespace Quantum {
                 mario->IsSkidding = false;
             }
 
-            if (f.Unsafe.TryGetPointer(mario->HeldEntity, out Holdable* holdable) && holdable->HoldAboveHead && f.Number - mario->HoldStartFrame < 60) {
-                physicsObject->Velocity.X = 0;
-                return;
-            }
-
             ref var inputs = ref filter.Inputs;
             bool mega = mario->CurrentPowerupState == PowerupState.MegaMushroom;
             bool run = (inputs.Sprint.IsDown || mega || mario->IsPropellerFlying) && (mega || !mario->IsSpinnerFlying);
@@ -389,10 +384,6 @@ namespace Quantum {
             QuantumUtils.Decrement(ref mario->CoyoteTimeFrames);
             QuantumUtils.Decrement(ref mario->JumpBufferFrames);
             QuantumUtils.Decrement(ref mario->CantJumpTimer);
-
-            if (f.Unsafe.TryGetPointer(mario->HeldEntity, out Holdable* holdable) && holdable->HoldAboveHead && f.Number - mario->HoldStartFrame < 60) {
-                return;
-            }
 
             if (!mario->DoEntityBounce && (physicsObject->IsBeingCrushed || physicsObject->IsUnderwater || !doJump || mario->IsInKnockback || (mario->CurrentPowerupState == PowerupState.MegaMushroom && mario->JumpState == JumpState.SingleJump) || mario->IsWallsliding)) {
                 return;
@@ -2480,7 +2471,8 @@ namespace Quantum {
         }
 
         public void OnPlayerDisconnected(Frame f, PlayerRef player) {
-            foreach ((var entity, var mario) in f.Unsafe.GetComponentBlockIterator<MarioPlayer>()) {
+            var marios = f.Filter<MarioPlayer>();
+            while (marios.NextUnsafe(out EntityRef entity, out MarioPlayer* mario)) {
                 if (mario->PlayerRef != player) {
                     continue;
                 }

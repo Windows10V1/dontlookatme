@@ -167,10 +167,8 @@ namespace NSMB {
         }
 
         public void OnUnitySceneLoadDone(CallbackUnitySceneLoadDone e) {
-            if (e.SceneName != null) {
-                foreach (int localPlayer in e.Game.GetLocalPlayerSlots()) {
-                    e.Game.SendCommand(localPlayer, new CommandPlayerLoaded());
-                }
+            foreach (int localPlayer in e.Game.GetLocalPlayerSlots()) {
+                e.Game.SendCommand(localPlayer, new CommandPlayerLoaded());
             }
 
             discordController.UpdateActivity();
