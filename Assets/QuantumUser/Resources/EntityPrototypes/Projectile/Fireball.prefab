@@ -61,12 +61,12 @@ MonoBehaviour:
     PositionOffset:
       RawValue: 0
   PhysicsCollider:
+    IsEnabled: 1
     IsTrigger: 0
     Material:
       Id:
         Value: 0
     SourceCollider: {fileID: 0}
-    IsEnabled: 1
     Shape2D:
       ShapeType: 4
       PolygonCollider:
@@ -338,7 +338,7 @@ MonoBehaviour:
   sRenderer: {fileID: 5329144335610595165}
   animator: {fileID: 0}
   legacySpriteAnimator: {fileID: 9162743564300288012}
-  sameTeamColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
+  sameTeamColor: {r: 0.43137255, g: 0.43137255, b: 0.43137255, a: 1}
   differentTeamColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &-8971064262029751978
 MonoBehaviour:
@@ -489,14 +489,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisplaying: 1
-  runInEditor: 0
   frame: 0.5826652
+  runInEditor: 0
   fps: 12
   frames:
   - {fileID: 5353841184698615464, guid: 8b4c76bfff99dba4b90ef29e19c39f48, type: 3}
   - {fileID: 750297706712597742, guid: 8b4c76bfff99dba4b90ef29e19c39f48, type: 3}
   - {fileID: -8127487528002223245, guid: 8b4c76bfff99dba4b90ef29e19c39f48, type: 3}
   - {fileID: -3915765450054648673, guid: 8b4c76bfff99dba4b90ef29e19c39f48, type: 3}
+  colorblindModeFrames: []
   useUnscaledDelta: 0
   sRenderer: {fileID: 5329144335610595165}
   image: {fileID: 0}
