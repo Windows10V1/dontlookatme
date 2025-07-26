@@ -9,14 +9,6 @@ AnimatorOverrideController:
   m_Name: SmallMario
   m_Controller: {fileID: 9100000, guid: fa2b2fc953f5f444291d26193e0ac7fb, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 2579836911327356150, guid: 024ceb223bceebd488dbc425555f4df0,
-      type: 3}
-    m_OverrideClip: {fileID: 8419052139562869826, guid: e0d3ef6bcff32414dbd34fc6ac031292,
-      type: 3}
-  - m_OriginalClip: {fileID: 1708979000861537007, guid: 024ceb223bceebd488dbc425555f4df0,
-      type: 3}
-    m_OverrideClip: {fileID: 4160601144243102020, guid: e0d3ef6bcff32414dbd34fc6ac031292,
-      type: 3}
   - m_OriginalClip: {fileID: 761537080958417666, guid: 024ceb223bceebd488dbc425555f4df0,
       type: 3}
     m_OverrideClip: {fileID: 1412296139127706353, guid: e0d3ef6bcff32414dbd34fc6ac031292,
@@ -217,4 +209,12 @@ AnimatorOverrideController:
   - m_OriginalClip: {fileID: -2426943010639917990, guid: 024ceb223bceebd488dbc425555f4df0,
       type: 3}
     m_OverrideClip: {fileID: -747683311231444747, guid: e0d3ef6bcff32414dbd34fc6ac031292,
+      type: 3}
+  - m_OriginalClip: {fileID: 5304300961600207028, guid: 024ceb223bceebd488dbc425555f4df0,
+      type: 3}
+    m_OverrideClip: {fileID: -2151110872859412887, guid: e0d3ef6bcff32414dbd34fc6ac031292,
+      type: 3}
+  - m_OriginalClip: {fileID: 3698728561107381714, guid: 024ceb223bceebd488dbc425555f4df0,
+      type: 3}
+    m_OverrideClip: {fileID: -1537112494762962389, guid: e0d3ef6bcff32414dbd34fc6ac031292,
       type: 3}
