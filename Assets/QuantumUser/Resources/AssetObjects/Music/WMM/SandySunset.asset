@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075af0e881e112348abe562216ddc298, type: 3}
+  m_Name: SandySunset
+  m_EditorClassIdentifier: 
+  Identifier:
+    Path: QuantumUser/Resources/AssetObjects/Music/WMM/SandySunset
+    Guid:
+      Value: 354581691998479332
+  clip: {fileID: 8300000, guid: 7217ecfe2d3107241a7dfcc1acf4c0e8, type: 3}
+  fastClip: {fileID: 8300000, guid: f8b5c2b127542904b876946e59d87084, type: 3}
+  loopStartSeconds: 1.02
+  loopEndSeconds: 132.39
+  speedupFactor: 1.25

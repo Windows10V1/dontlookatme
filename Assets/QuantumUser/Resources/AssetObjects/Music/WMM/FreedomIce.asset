@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075af0e881e112348abe562216ddc298, type: 3}
+  m_Name: FreedomIce
+  m_EditorClassIdentifier: 
+  Identifier:
+    Path: QuantumUser/Resources/AssetObjects/Music/WMM/FreedomIce
+    Guid:
+      Value: 435744992964533468
+  clip: {fileID: 8300000, guid: 93260ba5a273e724c876e3ae7f0624ce, type: 3}
+  fastClip: {fileID: 8300000, guid: de7712cbacf3f634b9ad7d9111702179, type: 3}
+  loopStartSeconds: 11.11
+  loopEndSeconds: 85.89
+  speedupFactor: 1.25
