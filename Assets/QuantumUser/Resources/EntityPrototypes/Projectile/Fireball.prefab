@@ -338,7 +338,7 @@ MonoBehaviour:
   sRenderer: {fileID: 5329144335610595165}
   animator: {fileID: 0}
   legacySpriteAnimator: {fileID: 9162743564300288012}
-  sameTeamColor: {r: 0.43137255, g: 0.43137255, b: 0.43137255, a: 1}
+  sameTeamColor: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 1}
   differentTeamColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &-8971064262029751978
 MonoBehaviour:
